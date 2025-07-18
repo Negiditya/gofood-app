@@ -14,7 +14,7 @@ function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-
+       
 
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/createuser`, {
@@ -23,9 +23,11 @@ function Signup() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(credentials)
+                
 
 
             });
+      
 
             const data = await response.json();
             if (data.success) {

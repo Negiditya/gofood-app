@@ -24,7 +24,7 @@ app.use(cors({
 
 
 app.use("/api", require("./Routes/AuthUser"))
-app.use("/api", verifyToken, require("./Routes/DisplayData"))
+app.use("/api",  require("./Routes/DisplayData"))
 app.use("/api", verifyToken, require("./Routes/ordersData"))
 
 
