@@ -25,7 +25,7 @@ function Cart({ onclose }) {
 
       const orderData = { cart, orderDate: new Date().toISOString() }
       
-      let response = await fetch('http://localhost:5000/api/ordersData', {
+      let response = await fetch(`${import.meta.env.VITE_API_URL}api/ordersData`, {
         method: "post",
         headers: {
           'content-type': 'application/json',
@@ -36,7 +36,7 @@ function Cart({ onclose }) {
       response = await response.json()
       setCart([])
       if (response.success) {
-        console.log(response.message)
+        
       }
       else {
         console.log(response.error)

@@ -7,7 +7,7 @@ function OrderHistory() {
 
     const fetchMyOrders = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/myorders", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/myorders`, {
                 method: "get",
                 headers: {
                     "auth-token": localStorage.getItem("authToken"),
