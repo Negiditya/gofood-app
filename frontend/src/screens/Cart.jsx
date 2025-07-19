@@ -25,7 +25,7 @@ function Cart({ onclose }) {
 
       const orderData = { cart, orderDate: new Date().toISOString() }
       
-      let response = await fetch(`${import.meta.env.VITE_API_URL}api/ordersData`, {
+      let response = await fetch(`${import.meta.env.VITE_API_URL}/api/ordersData`, {
         method: "post",
         headers: {
           'content-type': 'application/json',
